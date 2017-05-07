@@ -35,6 +35,19 @@ Syntax highlighted code block
 [Link](url) and ![Image](src)
 ```
 
+```HTML
+post_detail.html
+<h1 class="entry-title">
+{% if page.title %}
+    <a href="{{ root_url }}{{ page.url }}">{{ page.title }}</a>
+{% endif %}
+{% if post.title %}
+    <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+{% endif %}
+</h1>
+<div class="entry-content">{{ content }}</div>
+```
+
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
